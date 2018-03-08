@@ -2,6 +2,8 @@ package sort;
 
 /**
  * Created by liuzhihan on 2018/3/8.
+ * 参考文档
+ * http://blog.csdn.net/vayne_xiao/article/details/53508973
  */
 public class QuickSort {
 
