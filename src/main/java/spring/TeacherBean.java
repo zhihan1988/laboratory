@@ -49,14 +49,14 @@ public class TeacherBean implements InitializingBean, DisposableBean, BeanNameAw
      * 自己编写的初始化方法
      */
     public void myInit(){
-        System.out.println("【init-method】调用init-method属性配置的初始化方法");
+        System.out.println("【init-method】调用老师类init-method属性配置的初始化方法");
     }
 
     /**
      * 自己编写的销毁方法
      */
     public void myDestroy(){
-        System.out.println("【destroy-method】调用destroy-method属性配置的销毁方法");
+        System.out.println("【destroy-method】调用老师类destroy-method属性配置的销毁方法");
     }
 
     /**
@@ -67,7 +67,7 @@ public class TeacherBean implements InitializingBean, DisposableBean, BeanNameAw
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         this.beanFactory = beanFactory;
-        System.out.println("【BeanFactoryAware接口】调用BeanFactoryAware的setBeanFactory方法得到beanFactory引用");
+        System.out.println("【BeanFactoryAware接口】调用老师类BeanFactoryAware的setBeanFactory方法得到beanFactory引用");
     }
 
     /**
@@ -77,7 +77,7 @@ public class TeacherBean implements InitializingBean, DisposableBean, BeanNameAw
     @Override
     public void setBeanName(String name) {
         this.beanName = name;
-        System.out.println("【BeanNameAware接口】调用BeanNameAware的setBeanName方法得到Bean的名称");
+        System.out.println("【BeanNameAware接口】调用老师类BeanNameAware的setBeanName方法得到Bean的名称");
     }
 
     /**
@@ -86,7 +86,7 @@ public class TeacherBean implements InitializingBean, DisposableBean, BeanNameAw
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("【InitializingBean接口】调用InitializingBean接口的afterPropertiesSet方法");
+        System.out.println("【InitializingBean接口】调用老师类InitializingBean接口的afterPropertiesSet方法");
     }
 
     /**
@@ -95,6 +95,6 @@ public class TeacherBean implements InitializingBean, DisposableBean, BeanNameAw
      */
     @Override
     public void destroy() throws Exception {
-        System.out.println("【DisposableBean接口】调用DisposableBean接口的destroy方法");
+        System.out.println("【DisposableBean接口】调用老师类DisposableBean接口的destroy方法");
     }
 }

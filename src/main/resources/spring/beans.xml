@@ -24,8 +24,17 @@
     <!--lazy-init 默认为false-->
     <bean id="studentBean" class="spring.StudentBean" init-method="myInit"
           destroy-method="myDestroy" scope="singleton" lazy-init="true">
-        <property name="name" value="test"></property>
-        <property name="age" value="27"></property>
+        <property name="name" value="student"></property>
+        <property name="age" value="21"></property>
+        <property name="teacherBean" ref="teacherBean"></property>
     </bean>
+
+    <!--lazy-init 默认为false-->
+    <bean id="teacherBean" class="spring.TeacherBean" init-method="myInit"
+          destroy-method="myDestroy" scope="singleton" lazy-init="true">
+        <property name="name" value="teacher"></property>
+        <property name="age" value="33"></property>
+    </bean>
+
 
 </beans>
