@@ -10,19 +10,19 @@
             http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
     <!--配置Bean的后置处理器-->
-    <bean id="beanPostProcessor" class="spring.MyBeanPostProcessor">
+    <bean id="beanPostProcessor" class="spring.lifeCycle.xml.MyBeanPostProcessor">
     </bean>
 
     <!--配置instantiationAwareBeanPostProcessor-->
-    <bean id="instantiationAwareBeanPostProcessor" class="spring.MyInstantiationAwareBeanPostProcessor">
+    <bean id="instantiationAwareBeanPostProcessor" class="spring.lifeCycle.xml.MyInstantiationAwareBeanPostProcessor">
     </bean>
 
     <!--配置BeanFactory的后置处理器-->
-    <bean id="beanFactoryPostProcessor" class="spring.MyBeanFactoryPostProcessor">
+    <bean id="beanFactoryPostProcessor" class="spring.lifeCycle.xml.MyBeanFactoryPostProcessor">
     </bean>
 
     <!--lazy-init 默认为false-->
-    <bean id="studentBean" class="spring.StudentBean" init-method="myInit"
+    <bean id="studentBean" class="spring.lifeCycle.xml.StudentBean" init-method="myInit"
           destroy-method="myDestroy" scope="singleton" lazy-init="true">
         <property name="name" value="student"></property>
         <property name="age" value="21"></property>
@@ -30,7 +30,7 @@
     </bean>
 
     <!--lazy-init 默认为false-->
-    <bean id="teacherBean" class="spring.TeacherBean" init-method="myInit"
+    <bean id="teacherBean" class="spring.lifeCycle.xml.TeacherBean" init-method="myInit"
           destroy-method="myDestroy" scope="singleton" lazy-init="true">
         <property name="name" value="teacher"></property>
         <property name="age" value="33"></property>

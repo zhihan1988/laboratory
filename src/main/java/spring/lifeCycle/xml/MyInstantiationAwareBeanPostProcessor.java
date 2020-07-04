@@ -1,4 +1,4 @@
-package spring;
+package spring.lifeCycle.xml;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValues;
